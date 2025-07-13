@@ -62,7 +62,7 @@ public class MainScreen {
     }
 
     private void addShowGameStatusButton(final JPanel mainPanel) {
-        checkGameStatusButton = new FinishGameButton(e -> {
+        checkGameStatusButton = new CheckGameStatusButton(e -> {
             var hasAnyErrors = boardService.hasAnyErrors();
             var gameStatus = boardService.getStatus();
             var message = switch (gameStatus) {
